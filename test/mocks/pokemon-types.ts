@@ -3,6 +3,7 @@ import type { Pokemon } from "@/graphql/types";
 export const bulbasaurMock: Pokemon = {
   id: "UG9rZW1vbjowMDE=",
   name: "Bulbasaur",
+  image: "https://img.pokemondb.net/artwork/bulbasaur.jpg",
   types: ["Grass", "Poison"],
   attacks: {
     special: [
@@ -23,6 +24,7 @@ export const bulbasaurMock: Pokemon = {
 export const charmanderMock: Pokemon = {
   id: "UG9rZW1vbjowMDQ=",
   name: "Charmander",
+  image: "https://img.pokemondb.net/artwork/charmander.jpg",
   types: ["Fire"],
   attacks: {
     special: [
@@ -43,6 +45,7 @@ export const charmanderMock: Pokemon = {
 export const squirtleMock: Pokemon = {
   id: "UG9rZW1vbjowMDc=",
   name: "Squirtle",
+  image: "https://img.pokemondb.net/artwork/squirtle.jpg",
   types: ["Water"],
   attacks: {
     special: [

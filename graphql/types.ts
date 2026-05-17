@@ -11,6 +11,7 @@ export type PokemonEvolution = {
 export type Pokemon = {
   id: string;
   name: string;
+  image: string | null;
   types: string[];
   attacks: {
     special: PokemonAttack[];

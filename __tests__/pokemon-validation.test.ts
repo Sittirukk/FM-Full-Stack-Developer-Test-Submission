@@ -6,6 +6,7 @@ describe("isValidPokemon", () => {
       isValidPokemon({
         id: "UG9rZW1vbjowMjU=",
         name: "Pikachu",
+        image: "https://img.pokemondb.net/artwork/pikachu.jpg",
         types: ["Electric"],
         attacks: {
           special: [
@@ -30,6 +31,7 @@ describe("isValidPokemon", () => {
       isValidPokemon({
         id: "UG9rZW1vbjowMjU=",
         name: "Pikachu",
+        image: null,
         types: ["Electric"],
         attacks: {
           special: [

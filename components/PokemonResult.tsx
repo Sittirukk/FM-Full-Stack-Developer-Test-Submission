@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { memo } from "react";
 import type { Pokemon } from "@/graphql/types";
 import { isValidPokemon } from "@/lib/pokemon-validation";
@@ -27,17 +28,37 @@ export const PokemonResult = memo(function PokemonResult({
 
   return (
     <section className={styles.result} aria-label={`${pokemon.name} details`}>
-      <div className={styles.titleRow}>
-        <h2>{pokemon.name}</h2>
-      </div>
+      <div className={styles.hero}>
+        <div className={styles.imagePanel}>
+          {pokemon.image ? (
+            <Image
+              className={styles.pokemonImage}
+              src={pokemon.image}
+              alt={pokemon.name}
+              width={320}
+              height={320}
+            />
+          ) : (
+            <div className={styles.imageFallback} aria-hidden="true">
+              {pokemon.name.slice(0, 1)}
+            </div>
+          )}
+        </div>
 
-      <ul className={styles.typeList} aria-label={`${pokemon.name} types`}>
-        {pokemon.types.map((type) => (
-          <li key={type} className={styles.typeBadge}>
-            {type}
-          </li>
-        ))}
-      </ul>
+        <div className={styles.heroContent}>
+          <div className={styles.titleRow}>
+            <h2>{pokemon.name}</h2>
+          </div>
+
+          <ul className={styles.typeList} aria-label={`${pokemon.name} types`}>
+            {pokemon.types.map((type) => (
+              <li key={type} className={styles.typeBadge}>
+                {type}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
 
       <div className={styles.grid}>
         <div>

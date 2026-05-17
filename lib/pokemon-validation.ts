@@ -10,6 +10,7 @@ export function isValidPokemon(value: unknown): value is Pokemon {
   return (
     typeof pokemon.id === "string" &&
     typeof pokemon.name === "string" &&
+    (pokemon.image === null || typeof pokemon.image === "string") &&
     Array.isArray(pokemon.types) &&
     pokemon.types.every((type) => typeof type === "string") &&
     !!pokemon.attacks &&

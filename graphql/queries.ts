@@ -5,6 +5,7 @@ export const GET_POKEMON_BY_NAME = gql`
     pokemon(name: $name) {
       id
       name
+      image
       types
       attacks {
         special {
